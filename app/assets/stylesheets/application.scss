@@ -13,3 +13,68 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+ @import "bootstrap-sprockets";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+ /*Collapsable navbar*/
+
+ .navbar-default .navbar-nav > li > a {
+     color: #A0522D;
+     font-size: 26px;
+     line-height: 100px;
+     height: 100px;
+     padding-top: 0;
+     font-family: 'Abril Fatface';
+ }
+
+ .has-tooltip {
+   text-decoration: none;
+   color: #A0522D;
+   font-size: 26px;
+   line-height: 100px;
+   height: 100px;
+   padding-top: 0;
+   font-family: 'Abril Fatface';
+   padding: 10px;
+ }
+
+ .has-tooltip > a {
+   text-decoration: none;
+   color: #A0522D;
+   font-size: 26px;
+   line-height: 100px;
+   height: 100px;
+   padding-top: 0;
+   font-family: 'Abril Fatface';
+ }
+
+
+ .navbar-default .navbar-brand {
+     color: #A0522D;
+  }
+
+
+ .navbar-brand {
+   font-family: 'Permanent Marker', cursive;
+   color: #A0522D;
+   line-height: 100px;
+   height: 100px;
+   padding-top: 0;
+   font-size: 40px;
+ }
+ .navbar-default {
+     background-color: #EEE8AA;
+ }
+
+ .nav-stacked {
+   font-size: 30px;
+   color: #A0522D;
+ }
+ .nav-stacked > a {
+   font-size: 30px;
+   color: #A0522D;
+ }
