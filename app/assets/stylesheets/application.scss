@@ -26,7 +26,8 @@
      color: #A0522D;
      font-size: 26px;
      line-height: 100px;
-     height: 100px;
+     min-height: 35px;
+     max-height: 35px;
      padding-top: 0;
      font-family: 'Abril Fatface';
  }
@@ -77,4 +78,8 @@
  .nav-stacked > a {
    font-size: 30px;
    color: #A0522D;
+ }
+
+ body {
+  padding-top: 35px;
  }
