@@ -1,0 +1,11 @@
+<%= form_for(@song) do |f| %>
+
+<%= f.label 'Choose your file' %> 
+<%= f.file_field :song %>
+
+<%= f.label "What's the title?" %>
+<%= f.text_field :title, autofocus: true%>
+
+<%= f.submit :song %>
+
+<% end %>

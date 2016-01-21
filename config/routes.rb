@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  resources :songs
   
   # Added by Koudoku.
   mount Koudoku::Engine, at: 'koudoku'
