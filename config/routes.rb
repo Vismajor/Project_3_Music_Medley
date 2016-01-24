@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  resources :users, only: [:show, :index] do
+    resources :favourites
+  end
   resources :songs
+  resources :collections
+
   
   # Added by Koudoku.
   mount Koudoku::Engine, at: 'koudoku'
@@ -9,7 +14,7 @@ Rails.application.routes.draw do
   end
 
 
-  devise_for :users, :controllers => { registrations: 'registrations' }
+ 
 
 
   root to: "home#index"

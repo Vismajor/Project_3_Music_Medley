@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 # Added by Koudoku.
   has_one :subscription
+  has_many :favourites
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -9,4 +10,10 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
   has_many :songs
+
+
+
+  def favouriteds
+    favourites.map(&:favourited)
+  end
 end

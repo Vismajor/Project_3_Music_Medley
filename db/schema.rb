@@ -11,13 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120234343) do
+ActiveRecord::Schema.define(version: 20160122162537) do
+
+  create_table "collections", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "collections_songs", id: false, force: :cascade do |t|
+    t.integer "collection_id"
+    t.integer "song_id"
+  end
+
+  add_index "collections_songs", ["collection_id", "song_id"], name: "index_collections_songs_on_collection_id_and_song_id"
+  add_index "collections_songs", ["song_id"], name: "index_collections_songs_on_song_id"
 
   create_table "coupons", force: :cascade do |t|
     t.string   "code"
     t.string   "free_trial_length"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.integer  "favourited_id"
+    t.integer  "user_id"
+    t.string   "favourited_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "genres", force: :cascade do |t|
