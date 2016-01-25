@@ -8,6 +8,12 @@
 
 <body>
 
+<%= search_form_for @search do |f|  %>
+<%= f.label :title_or_user_name_cont, "Search song"  %>
+<%= f.text_field :title_or_user_name_cont  %><br>
+<%= f.submit "Search"  %>
+<% end %>
+
 
 <% @songs.each do |song| %>
 <ul>
@@ -79,9 +85,10 @@
 <%= link_to "Buy/download this song" %>
 <%= link_to "Add to your favorites" %>
 </ul>
+
 <% end %>
 
-
+<%#= will_paginate @songs %>
 
 
 </body>

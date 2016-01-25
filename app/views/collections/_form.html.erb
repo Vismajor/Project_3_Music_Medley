@@ -11,6 +11,7 @@
 
 <%= f.label 'Give a title to your collection!' %> 
 <%= f.text_field :title %>
+<%= f.submit %>
 
 <% Song.all.each do |song| %>
 <ul>
@@ -84,7 +85,7 @@
 <%= f.label "Add #{song.title} to your collection" %> 
 </ul>
 <% end %>
-<%= f.submit %>
+
 
 <% end %>
 </body>

@@ -6,7 +6,8 @@ class SongsController < ApplicationController
   end
 
   def index
-    @songs = Song.all
+    @search = Song.search(params[:q])
+    @songs = @search.result(page: params[:page], per_page: 4)
   end
 
   def show

@@ -5,7 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.delete_all
 Plan.delete_all
+
+User.create!( name: "ZsoltStein", email:"zsolt@mm.com", password: "password", role: "admin", about: "Gut Musik aus Eastern-Europe, ja? Achtung, achtung! Schneller! Eins Zwei Polizei!")
+User.create!( name: "Axis of Neilsome", email:"neil@mm.com", password: "password", role: "user", about: "4 chords is all you need. Maybe some teal. Neil-teal. Wooo!")
+User.create!( name: "Reel Big Graeme", email:"graemes@mm.com", password: "password", role: "user", about: "I got 99 problems, but bad taste in music ain't one!")
+User.create!( name: "Petestorm", email:"peter@mm.com", password: "password", role: "user", about: "Pirates of the Highlands. Yarr!")
+User.create!( name: "ParanoidAndroKeith", email:"keith@mm.com", password: "password", role: "user", about: "I could rate your taste in music - But you won't like it")
+# User.create!( name: "ZsoltStein", email:"zsolt@mm.com", password: "password", role: "user", about: "Gut Deutches Musik, ja? Achtung, achtung! Schneller! Eins Zwei Polizei!")
+# User.create!( name: "ZsoltStein", email:"zsolt@mm.com", password: "password", role: "user", about: "Gut Deutches Musik, ja? Achtung, achtung! Schneller! Eins Zwei Polizei!")
+# User.create!( name: "ZsoltStein", email:"zsolt@mm.com", password: "password", role: "user", about: "Gut Deutches Musik, ja? Achtung, achtung! Schneller! Eins Zwei Polizei!")
 
 Plan.create({
   name: 'Bronze',
