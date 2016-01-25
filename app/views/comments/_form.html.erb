@@ -1,0 +1,6 @@
+<%= form_for [commentable, commentable.comments.new] do |f| %>
+  <div>
+   <%= f.text_area :content, rows: 6, cols: 30 %>
+  </div>
+  <%= f.submit %>
+<% end %>

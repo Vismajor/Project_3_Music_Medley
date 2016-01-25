@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users, only: [:show, :index] do
     resources :favourites
+    resources :comments
   end
-  resources :songs
-  resources :collections
+  resources :songs do
+    resources :comments
+  end
+  resources :collections do
+    resources :comments
+  end
 
   
   # Added by Koudoku.

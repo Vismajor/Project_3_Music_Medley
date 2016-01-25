@@ -44,6 +44,6 @@ class CollectionsController < ApplicationController
     end
 
     def collection_params
-      params.require(:collection).permit(:collection, :title, :user_id, :song_id)
+      params.require(:collection).permit(:collection, :title, :user_id, {song_ids: []})
     end
 end

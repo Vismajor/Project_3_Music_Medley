@@ -1,5 +1,7 @@
 <%= @user.name %>
 
 
+<%= render partial: 'comments/form', locals: {commentable: @user} %>
 
-<%= link_to 'Pricing', main_app.pricing_path %>
+
+<%#= link_to 'Pricing', main_app.pricing_path %>
