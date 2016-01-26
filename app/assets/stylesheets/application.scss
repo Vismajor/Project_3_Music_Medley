@@ -19,74 +19,82 @@
  @import "font-awesome-sprockets";
  @import "font-awesome";
  @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+ @import 'bootstrap-datetimepicker';
 
-
-
- /*Collapsable navbar*/
-
- .navbar-default .navbar-nav > li > a {
-     color: #A0522D;
-     font-size: 26px;
-     line-height: 100px;
-     min-height: 35px;
-     max-height: 35px;
-     padding-top: 0;
-     font-family: 'Abril Fatface';
+ #main-logo {
+   font-family: 'BOLDfinger';
+   color: #ffad33;
+   text-align: center;
+   padding-top: 0px;
+   font-size: 35px;
+   text-decoration: none !important;
  }
 
- .has-tooltip {
-   text-decoration: none;
-   color: #A0522D;
-   font-size: 26px;
-   line-height: 100px;
-   height: 100px;
-   padding-top: 0;
-   font-family: 'Abril Fatface';
-   padding: 10px;
+ #main-logo a {
+   font-family: 'BOLDfinger';
+   color: #ffad33;
+   text-decoration: none !important;
  }
 
- .has-tooltip > a {
-   text-decoration: none;
-   color: #A0522D;
-   font-size: 26px;
-   line-height: 100px;
-   height: 100px;
-   padding-top: 0;
-   font-family: 'Abril Fatface';
+ input[type="checkbox"]{
+  border-radius: 10%;
+  display: inline-block;
+  vertical-align: center;
+  text-align: center;
+  margin-left: 13px;
+ cursor: pointer;
+ -webkit-appearance: none;
+ appearance: none;
+ background: #ffffff;
+ border-radius: 1px;
+ box-sizing: border-box;
+ position: static;
+ box-sizing: content-box ;
+ width: 14px;
+ height: 14px;
+ border-width: 0;
+ transition: all .3s linear;
+ }
+ input[type="checkbox"]:checked{
+   background-color: #ffad33;
+ }
+ input[type="checkbox"]:focus{
+   outline: 0 none;
+   box-shadow: none;
  }
 
-
- .navbar-default .navbar-brand {
-     color: #A0522D;
-     max-height: 30px;
-  }
-
-
- .navbar-brand {
-   font-family: 'Permanent Marker', cursive;
-   color: #A0522D;
-   line-height: 100px;
-   height: 100px;
-   padding-top: 0;
-   font-size: 40px;
- }
- .navbar-default {
-     background-color: #EEE8AA;
+ .collection-create {
+  vertical-align: center;
  }
 
- .nav-stacked {
-   font-size: 30px;
-   color: #A0522D;
- }
- .nav-stacked > a {
-   font-size: 30px;
-   color: #A0522D;
- }
+ // a:hover, a:visited, a:link, a:active {
+ //  text-decoration: none;
+ // }
 
  body {
-  padding-top: 150px;
-  // background: url(http://www.twitterevolutions.com/bgs/twitter-background-grungy-green-wall.jpg) no-repeat center center fixed; 
+  background: url(http://theartmad.com/wp-content/uploads/Dark-Grey-Background-Image-3.jpg) no-repeat center center fixed; 
   background-size: cover;
+ }
+
+
+ .navbar .navbar-nav {
+   display: inline-block;
+   float: none;
+   vertical-align: top;
+ }
+ .navbar .navbar-name {
+ }
+
+ .navbar-avatar {
+  max-height: 28px;
+ }
+
+ .show-block {
+  max-width: 80%;
+  color: white;
+  margin: 50px auto;
+  padding: 40px;
+  background: rgba(10,10,10,.8);
  }
 
  .player
@@ -285,7 +293,7 @@
  .sm2-bar-ui .bd,
  .sm2-bar-ui .sm2-extra-controls {
   position: relative;
-  background-color: #2288cc;
+  background-color: #595959;
   /*
   transition: background 0.2s ease-in-out;
   */
@@ -708,6 +716,13 @@
   -ms-interpolation-mode: bicubic;
  }
 
+ .add-to-collection {
+  background-image: url(image-path('pluss.png'));
+  background-image: none, url(image-path('pluss.svg'));
+  background-size: 58%;
+  background-position: 54% 51%;
+ }
+
  .play-pause,
  .play-pause:hover,
  .paused .play-pause:hover {
@@ -728,6 +743,8 @@
   background-image: url(image-path('volume.png'));
   background-image: none, url(image-path('volume.svg'));
  }
+
+
 
  .sm2-volume-control,
  .sm2-volume-shade {

@@ -21,9 +21,11 @@ class SongsController < ApplicationController
       if @song.update(song_params)
         format.html { redirect_to @song, notice: 'Song was successfully updated.' }
         format.json { render :show, status: :ok, location: @song }
+        format.js   { }
       else
         format.html { render :edit }
         format.json { render json: @song.errors, status: :unprocessable_entity }
+        format.js   { }
       end
     end
   end

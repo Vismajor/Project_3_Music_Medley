@@ -6,12 +6,17 @@
 </head>
 
 <body>
-
+<div id="wrapper">
+<div id="show-block">
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
 <%= form_for(@collection) do |f| %>
 
-<%= f.label 'Give a title to your collection!' %> 
-<%= f.text_field :title %>
-<%= f.submit %>
+<div class="collection-create"><%= f.label 'Give a title to your collection!' %> 
+<%= f.text_field :title %></div>
+<%= f.submit %><br>
 
 <% Song.all.each do |song| %>
 <ul>
@@ -61,6 +66,12 @@
    </div>
   </div>
 
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd-checkbox">
+    <%= check_box_tag "collection[song_ids][]", song.id %>
+   </div>
+  </div>
+
  </div>
 
  <div class="bd sm2-playlist-drawer sm2-element">
@@ -80,14 +91,17 @@
  </div>
 
 </div>
-<%= link_to "Buy/download this song" %>
-<%= check_box_tag "collection[song_ids][]", song.id %>
+
 <%= f.label "Add #{song.title} to your collection" %> 
 </ul>
 <% end %>
-
-
 <% end %>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 
 </html>

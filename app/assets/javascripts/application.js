@@ -14,6 +14,13 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require soundmanager
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
 
 
+$(document.ready(function() {
+ $('.menu-arrow').click(function() {
+ $(this).toggleClass('fa fa-arrow-circle-o-right fa2x');
+ $(this).toggleClass('fa fa-arrow-circle-o-left fa2x');
+});

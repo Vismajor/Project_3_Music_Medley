@@ -1,4 +1,4 @@
-class GigController < ApplicationController
+class GigsController < ApplicationController
   before_action :set_gig, only: [:show, :edit, :update, :destroy]
 
   def new

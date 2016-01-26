@@ -7,14 +7,19 @@
 </head>
 
 <body>
-
+<div id="wrapper">
+<div id="show-block">
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
 <%= search_form_for @search do |f|  %>
 <%= f.label :title_or_user_name_cont, "Search song"  %>
-<%= f.text_field :title_or_user_name_cont  %><br>
+<%= f.text_field :title_or_user_name_cont  %>
 <%= f.submit "Search"  %>
 <% end %>
 
-
+<br>
 <% @songs.each do |song| %>
 <ul>
 <div class="sm2-bar-ui compact">
@@ -82,13 +87,25 @@
  </div>
 
 </div>
-<%= link_to "Buy/download this song" %>
-<%= link_to "Add to your favorites" %>
 </ul>
 
 <% end %>
 
 <%#= will_paginate @songs %>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Menu Toggle Script -->
+
 
 
 </body>

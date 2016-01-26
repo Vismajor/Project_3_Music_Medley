@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :collections do
     resources :comments
   end
+  resources :gigs
+  resources :friendships
 
   
   # Added by Koudoku.
