@@ -1,11 +1,18 @@
+
+
 <%= form_for(@song) do |f| %>
 
-<%= f.label 'Choose your file' %> 
-<%= f.file_field :song %>
+<div align="center"><%= f.label 'Choose your file' %> 
+<%= f.file_field :song %></div>
+<br>
 
+<%= f.label "Genre?" %>
+<%= f.collection_select :genre_id, Genre.all, :id, :name %>
+<br>
 <%= f.label "What's the title?" %>
 <%= f.text_field :title, autofocus: true%>
-
-<%= f.submit :song %>
+<br>
+<%= f.submit "Upload!"%>
 
 <% end %>
+

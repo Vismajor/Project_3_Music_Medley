@@ -2,18 +2,10 @@
 
 one:
   name: MyString
-  stripe_id: MyString
-  price: 1.5
-  interval: MyString
-  features: MyText
-  highlight: false
-  display_order: 1
+  price: 9.99
+  mm_tokens: 1
 
 two:
   name: MyString
-  stripe_id: MyString
-  price: 1.5
-  interval: MyString
-  features: MyText
-  highlight: false
-  display_order: 1
+  price: 9.99
+  mm_tokens: 1

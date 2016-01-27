@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126142356) do
+ActiveRecord::Schema.define(version: 20160127012515) do
 
   create_table "collections", force: :cascade do |t|
     t.integer  "user_id"
@@ -38,13 +38,6 @@ ActiveRecord::Schema.define(version: 20160126142356) do
   end
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
-
-  create_table "coupons", force: :cascade do |t|
-    t.string   "code"
-    t.string   "free_trial_length"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
 
   create_table "favourites", force: :cascade do |t|
     t.integer  "favourited_id"
@@ -78,14 +71,10 @@ ActiveRecord::Schema.define(version: 20160126142356) do
 
   create_table "plans", force: :cascade do |t|
     t.string   "name"
-    t.string   "stripe_id"
-    t.float    "price"
-    t.string   "interval"
-    t.text     "features"
-    t.boolean  "highlight"
-    t.integer  "display_order"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.decimal  "price"
+    t.integer  "mm_tokens"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "songs", force: :cascade do |t|
@@ -100,15 +89,11 @@ ActiveRecord::Schema.define(version: 20160126142356) do
   end
 
   create_table "subscriptions", force: :cascade do |t|
-    t.string   "stripe_id"
-    t.integer  "plan_id"
-    t.string   "last_four"
-    t.integer  "coupon_id"
-    t.string   "card_type"
-    t.float    "current_price"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "email"
+    t.integer  "plan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

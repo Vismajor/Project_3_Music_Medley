@@ -13,13 +13,9 @@ Rails.application.routes.draw do
   end
   resources :gigs
   resources :friendships
-
-  
-  # Added by Koudoku.
-  mount Koudoku::Engine, at: 'koudoku'
-  scope module: 'koudoku' do
-    get 'pricing' => 'subscriptions#index', as: 'pricing'
-  end
+  resources :home
+  resources :subscriptions
+  resources :plans
 
 
  

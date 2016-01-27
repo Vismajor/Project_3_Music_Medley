@@ -22,11 +22,6 @@
 
     <title>Simple Sidebar - Start Bootstrap Template</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,12 +48,16 @@
                     </a>
                 </li>
                 <% if user_signed_in? %>
-                <li><%= link_to image_tag(current_user.avatar.thumb_navbar), current_user  %></li>
+                <li align="center"><%= link_to image_tag(current_user.avatar.thumb_medium, class: "round_avatar_navbar"), current_user  %></li>
                 <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
                 <li>    <%= link_to 'Upload music', new_song_path %></li>
+                <li><%#= link_to 'Pricing', main_app.pricing_path %></li>
                <li><%= link_to "Hello, #{current_user.name}", current_user %></li>
                <li><%= link_to "Find songs", songs_path %></li>
                <li><%= link_to "Create new collection", new_collection_path %></li>
+               <% if current_user.songs.count > 0 %>
+               <li><%= link_to "Announce a gig!", new_gig_path %></li>
+               <% end %>
                     <% else %>
                     <li><%= link_to "Login", new_user_session_path %></li>
                     <li><%= link_to "Sign up", new_user_registration_path %></li>
@@ -66,25 +65,20 @@
             </ul>
         </div>
 
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i id="menu-arrow" class="fa fa-arrow-circle-o-right fa-2x"></i></a>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i id="menu-arrow" class="fa fa-arrow-circle-o-left fa-2x rotate"></i></a>
                     <div class="row">
-                      <div class="col-md-1">.col-md-4</div>
-                      <div class="col-md-1">.col-md-4</div>
-                      <div class="col-md-1">.col-md-4</div>
-                      <div class="col-md-1">.col-md-4</div>
-                      <div class="col-md-4" id="main-logo"><%= link_to "MusicMedley", songs_path %></div>
-                      <div class="col-md-1">.col-md-4</div>
-                      <div class="col-md-1">.col-md-4</div>
-                      <div class="col-md-1">.col-md-4</div>
-                      <div class="col-md-1">.col-md-4</div>
+                      <div class="col-md-1"></div>
+                      <div class="col-md-1"></div>
+                    <div class="col-md-1"><% if user_signed_in? %><%= link_to image_tag(current_user.avatar.url, class: "round_avatar_navbar"), current_user %> <%# else %><% end %> </div>
+                      <div class="col-md-1"><%# if user_signed_in? %><%#= current_user.friends.count.where() %> <%# else %></div><%# end %>
+                      <div class="col-md-4" id="main-logo"><%= link_to "MusicMedley", home_index_path %></div>
+                      <div class="col-md-1"></div>
+                      <div class="col-md-1"></div>
+                      <div class="col-md-1"></div>
+                      <div class="col-md-1"></div>
                     </div>
                     <%= yield %>
     </div>
-
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>

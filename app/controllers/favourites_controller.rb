@@ -5,6 +5,7 @@ def index
   @favourites = @favourited.favourites
 end
 
+
 private 
 
   def find_favourited

@@ -8,6 +8,11 @@ class SongsController < ApplicationController
   def index
     @search = Song.search(params[:q])
     @songs = @search.result(page: params[:page], per_page: 4)
+    render @songs, layout: false if request.xhr?
+  end
+
+  def home_index
+    @songs = Song.all(page: params[:page], per_page: 4)
   end
 
   def show

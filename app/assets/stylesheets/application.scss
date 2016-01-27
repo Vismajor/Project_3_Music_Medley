@@ -21,6 +21,44 @@
  @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
  @import 'bootstrap-datetimepicker';
 
+
+.panel {
+  border: none;
+}
+
+.panel-heading {
+     background: #595959 !important; 
+     color: #ffffff !important;
+ }
+.panel-footer {
+     background: #595959; color: #ffffff;
+ }
+
+.panel panel-default {
+  background-image: url(image-path('steelgrid.jpg'));
+}
+
+.panel-title {
+text-align: center;
+}
+.panel-body {
+background: url(image-path('flame_background.jpg')) no-repeat center center fixed; 
+background-size: cover;
+}
+
+ul {
+  padding: none;
+}
+
+.round_avatar {
+  border-radius: 50%;
+  max-height: 100px;
+}
+.round_avatar_navbar {
+  border-radius: 50%;
+  max-height: 55px;
+}
+
  #main-logo {
    font-family: 'BOLDfinger';
    color: #ffad33;
@@ -65,6 +103,18 @@
 
  .collection-create {
   vertical-align: center;
+ }
+
+ .rotate{
+     -moz-transition: all 0.3s linear;
+     -webkit-transition: all 0.3s linear;
+     transition: all 0.3s linear;
+ }
+
+ .rotate.down{
+     -moz-transform:rotate(180deg);
+     -webkit-transform:rotate(180deg);
+     transform:rotate(180deg);
  }
 
  // a:hover, a:visited, a:link, a:active {
@@ -233,6 +283,8 @@
  }
 
  .sm2-bar-ui.compact {
+  position: relative;
+  left: 0px;
   min-width: 1em;
   max-width: 15em;
  }
@@ -251,7 +303,7 @@
  }
 
  .sm2-bar-ui.full-width {
-  max-width: 100%;
+  max-width: 75%; 
   z-index: 5;
  }
 

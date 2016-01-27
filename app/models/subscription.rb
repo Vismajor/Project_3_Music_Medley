@@ -1,8 +1,5 @@
 class Subscription < ActiveRecord::Base
-  include Koudoku::Subscription
-
-  
-  belongs_to :user
-  belongs_to :coupon
-
+  belongs_to :plan
+  validates_presence_of :plan_id
+  validates_presence_of :email
 end

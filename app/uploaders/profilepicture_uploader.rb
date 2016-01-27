@@ -10,6 +10,9 @@ class ProfilepictureUploader < CarrierWave::Uploader::Base
   version :thumb_navbar do
       process resize_to_fill: [50,50]
     end
+    version :thumb_medium do
+        process resize_to_fill: [100,100]
+      end
 
   # Choose what kind of storage to use for this uploader:
   storage :file

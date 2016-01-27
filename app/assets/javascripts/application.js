@@ -18,9 +18,27 @@
 //= require bootstrap-datetimepicker
 //= require_tree .
 
+$(function() {
 
-$(document.ready(function() {
- $('.menu-arrow').click(function() {
- $(this).toggleClass('fa fa-arrow-circle-o-right fa2x');
- $(this).toggleClass('fa fa-arrow-circle-o-left fa2x');
-});
+    $('#song_search').
+      on('ajax:success',function(evt, data, status, xhr){
+        $('#song_list').html(data);
+        soundManager.reboot();
+
+              }).
+      on('ajax:error',function(xhr, status, error){
+        console.log('failed:', error);
+      });
+
+
+
+
+        $('#q_title_or_user_name_cont').on('keyup', function() {
+          $('#song_search').submit();
+        });
+
+
+
+
+
+  });
