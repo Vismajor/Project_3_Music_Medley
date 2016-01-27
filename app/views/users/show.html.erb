@@ -5,9 +5,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-<h1><%= @user.name %></h1>
-<!-- <img src="<%#= @user.avatar.url %>" class="round_avatar"> -->
-<%= image_tag(@user.avatar.url, class: "round_avatar") %>
+
+<h1><%= @user.name %></h1><%= image_tag(@user.avatar.url, class: "round_avatar") %>
+Followers: <%= Friendship.all.where(:friend_id => @user.id).count  %>
 
 <% if current_user.friend_ids.include? @user.id %>
 <%= link_to "Unfollow", current_user.friendships.detect{|f| f.friend_id == @user.id}, :method => :delete %>
@@ -16,11 +16,22 @@
 <% end %>
 
 
-
 <%= render partial: 'comments/form', locals: {commentable: @user} %>
+
+
 <% @user.comments.each do |comment| %>
-<%= comment.content %>
+<div class="row">
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-heading"><%= comment.user.name %></div>
+  <div class="panel-body">
+    <%= comment.content %>
+  </div>
+</div>
+</div>
+</div>
 <% end %>
+
 
 
 <%#= link_to 'Pricing', main_app.pricing_path %>

@@ -6,7 +6,8 @@ class CollectionsController < ApplicationController
   end
 
   def index
-    @collections = Collection.all
+    @search = Collection.search(params[:q])
+    @collections = @search.result(page: params[:page], per_page: 4)
   end
 
   def show

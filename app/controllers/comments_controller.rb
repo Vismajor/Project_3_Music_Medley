@@ -1,8 +1,5 @@
 class CommentsController < ApplicationController
   before_filter :load_commentable
-  def index
-    @comments = @commentable.comments
-  end
 
   def create
     @comment = @commentable.comments.build(comment_params)
@@ -10,12 +7,12 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @commentable, notice: "Comment was created."
     else
-      render :new
+      redirect_to @commentable, notice: "Comment was not created."
     end
   end
 
-  def new
-    @comment = Comment.new
+  def destroy
+    @comment.destroy
   end
 
 

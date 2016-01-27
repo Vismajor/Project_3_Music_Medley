@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users, only: [:show, :index] do
-    resources :favourites
     resources :comments
   end
   resources :songs do
@@ -16,7 +15,8 @@ Rails.application.routes.draw do
   resources :home
   resources :subscriptions
   resources :plans
-
+  post 'favourite/:favourite_type/:id', to: 'favourites#create', as: :new_favourite
+  
 
  
 

@@ -5,17 +5,20 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-<%= search_form_for @search, remote: true do |f|  %>
-<%= f.label :title_or_user_name_cont, "Search song"  %>
+<%= search_form_for @search do |f|  %>
+<%= f.label :title_or_user_name_cont, "Search collections"  %>
 <%= f.text_field :title_or_user_name_cont  %>
 <%= f.submit "Search"  %>
 <% end %>
 
 <br>
 
-<div id="song_list">
-<%= render @songs %>
-</div>
+<% @collections.each do |collection| %>
+<%= link_to collection.title, collection %>
+<% collection.songs.each do |song| %>
+<%= song.title %>
+<% end %>
+<% end %>
 
 <%#= will_paginate @songs %>
             </div>
@@ -24,4 +27,3 @@
 </div>
 </div>
 </div>
-

@@ -13,7 +13,6 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :name
   has_many :songs
   has_many :comments, as: :commentable
-  has_many :comments
   has_many :friendships
   has_many :friends, :through => :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"

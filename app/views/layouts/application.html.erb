@@ -43,9 +43,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        MusicMedley
-                    </a>
+                    <%= link_to "MusidMedley", home_index_path %>
                 </li>
                 <% if user_signed_in? %>
                 <li align="center"><%= link_to image_tag(current_user.avatar.thumb_medium, class: "round_avatar_navbar"), current_user  %></li>
@@ -53,9 +51,10 @@
                 <li>    <%= link_to 'Upload music', new_song_path %></li>
                 <li><%#= link_to 'Pricing', main_app.pricing_path %></li>
                <li><%= link_to "Hello, #{current_user.name}", current_user %></li>
-               <li><%= link_to "Find songs", songs_path %></li>
+               <li><%= link_to "Explore songs", songs_path %></li>
                <li><%= link_to "Find gigs", gigs_path %></li>
                <li><%= link_to "Announce a gig!", new_gig_path %></li>
+               <li><%= link_to "Explore collections!", collections_path %></li>
                <li><%= link_to "Create new collection", new_collection_path %></li>
                <% if current_user.songs.count > 0 %>
                <% end %>
