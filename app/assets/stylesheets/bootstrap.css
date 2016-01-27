@@ -3060,8 +3060,13 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
+  color: #ffffff;
+  background-color: #595959;
+  border-color: #ccc;
+}
+.btn-default a {
+  color: #ffffff;
+  background-color: #595959;
   border-color: #ccc;
 }
 .btn-default:focus,
@@ -5821,6 +5826,8 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 .well {
+  position: absolute;
+  left: 0px;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;

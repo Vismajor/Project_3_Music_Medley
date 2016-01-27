@@ -1,5 +1,5 @@
-
-
+<div id="wrapper-signup">
+<div id="show-block">
 <div id="page-content-wrapper">
     <div class="container-fluid">
         <div class="row">
@@ -28,10 +28,12 @@
                     <%= f.submit "Log in" %>
                   </div>
                 <% end %>
-
-                <%= render "devise/shared/links" %>
-
+                <div class="actions-signup">
+                <%= button_to "Sign up", new_user_registration_path %>
+                </div>
+</div>
             </div>
         </div>
     </div>
+</div>
 </div>

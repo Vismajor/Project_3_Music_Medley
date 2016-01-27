@@ -1,5 +1,9 @@
-
-
+<div id="wrapper-signup">
+<div id="show-block">
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -11,6 +15,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+  <%= f.label :avatar %>
   <%= f.file_field :avatar %>
   </div>
   <div class="field">
@@ -30,10 +35,19 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
+<br>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+<br>
+<div class="actions-login">
+<%= button_to "Login", new_user_session_path %>
+</div>
 
-<%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -21,6 +21,33 @@
  @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
  @import 'bootstrap-datetimepicker';
 
+ // .flexcontainer {
+ //    display: -webkit-flex;
+ //    display: flex;
+ //    -webkit-align-items: center;
+ //    align-items: center;
+ //    -webkit-justify-content: center;
+ //    justify-content: center;
+ //    -webkit-flex-flow: column wrap;
+ //    flex-flow: column wrap;
+ //    -webkit-align-content: center;
+ //    align-content: center;
+ // }
+
+ .follow-button {
+  background-color: #595959;
+ }
+
+.actions {
+  padding-left: 50px;
+}
+.actions-login {
+  padding-left: 56px;
+}
+.actions-signup {
+  padding-left: 47px;
+}
+
 
 #menu-toggle {
   position: fixed;
@@ -31,8 +58,25 @@
 body {
   padding-top: 50px;
   z-index: 0;
+  color: #ffffff;
+  font-family: "Trebuchet MS"
 }
+input[type="text"], textarea {
+  background-color : #595959; 
+}
+input[type="email"], textarea {
+  background-color : #595959; 
+}
+input[type="password"], textarea {
+  background-color : #595959; 
+}
+input[type="submit"], textarea {
+  background-color : #595959; 
+}
+select {
+  background-color : #595959; 
 
+}
 .panel {
   border: none;
 }
