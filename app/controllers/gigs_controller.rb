@@ -6,7 +6,7 @@ class GigsController < ApplicationController
   end
 
   def index
-    @collections = Gig.all
+    @gigs = Gig.all
   end
 
   def show
@@ -29,7 +29,7 @@ class GigsController < ApplicationController
 
   def create
     @gig = Gig.new(gig_params) do |gig|
-      collection.user = current_user
+      gig.user = current_user
     end
     if @gig.save
       redirect_to root_path
@@ -44,6 +44,6 @@ class GigsController < ApplicationController
     end
 
     def gig_params
-      params.require(:gig).permit(:gig, :name, :user_id, :address, :starting_time, :status)
+      params.require(:gig).permit(:gig, :name, :user_id, :address, :starting_time, :status, :longitude, :latitude)
     end
 end

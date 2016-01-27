@@ -54,9 +54,10 @@
                 <li><%#= link_to 'Pricing', main_app.pricing_path %></li>
                <li><%= link_to "Hello, #{current_user.name}", current_user %></li>
                <li><%= link_to "Find songs", songs_path %></li>
+               <li><%= link_to "Find gigs", gigs_path %></li>
+               <li><%= link_to "Announce a gig!", new_gig_path %></li>
                <li><%= link_to "Create new collection", new_collection_path %></li>
                <% if current_user.songs.count > 0 %>
-               <li><%= link_to "Announce a gig!", new_gig_path %></li>
                <% end %>
                     <% else %>
                     <li><%= link_to "Login", new_user_session_path %></li>

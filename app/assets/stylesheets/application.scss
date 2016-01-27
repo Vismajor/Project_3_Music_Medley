@@ -22,6 +22,17 @@
  @import 'bootstrap-datetimepicker';
 
 
+#menu-toggle {
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+}
+
+body {
+  padding-top: 50px;
+  z-index: 0;
+}
+
 .panel {
   border: none;
 }
