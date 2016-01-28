@@ -15,6 +15,7 @@ User.create!( name: "Axis of Neilsome", email:"neil@mm.com", password: "password
 User.create!( name: "Reel Big Graeme", email:"graemes@mm.com", password: "password", role: "user", about: "I got 99 problems, but bad taste in music ain't one!", avatar: File.open(File.join(Rails.root, 'graeme.jpeg')))
 User.create!( name: "Petestorm", email:"peter@mm.com", password: "password", role: "user", about: "Pirates of the Highlands. Yarr!", avatar: File.open(File.join(Rails.root, 'peter.jpeg')))
 User.create!( name: "San-C/DC", email:"sandy@mm.com", password: "password", role: "user", about: "For those about to rock - we salute you!", avatar: File.open(File.join(Rails.root, 'sandy.jpeg')))
+User.create!( name: "MyCocaine", email:"mycocaine@mm.com", password: "password", role: "admin", about: "Tangerines...", avatar: File.open(File.join(Rails.root, 'michaeltangerine.jpg')))
 User.create!( name: "User1", email:"user1@mm.com", password: "password", role: "user", about: "For those about to rock - we salute you!")
 User.create!( name: "User2", email:"user2@mm.com", password: "password", role: "user", about: "For those about to rock - we salute you!")
 User.create!( name: "User3", email:"user3@mm.com", password: "password", role: "user", about: "For those about to rock - we salute you!")
@@ -63,6 +64,9 @@ Song.create!( title: "Title and registration", user_id: 4, genre_id: 7, song: Fi
 Song.create!( title: "Rosie", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Rosie.mmp3')))
 Song.create!( title: "Back in Black", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Back in black.mp3')))
 Song.create!( title: "Thunderstruck", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Thunderstruck.mp3')))
-Song.create!( title: "Dirty deeds", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Dirty deeds.mp3')))
+Song.create!( title: "Dirty deeds", user_id: 6, genre_id: 2, song: File.open(File.join(Rails.root, 'Dirty deeds.mp3')))
+Song.create!( title: "Tangerines", user_id: 6, genre_id: 2, song: File.open(File.join(Rails.root, 'tangerine1.mp3')))
+Song.create!( title: "Tangerines the size of tangerines", user_id: 6, genre_id: 2, song: File.open(File.join(Rails.root, 'tangerine2.mp3')))
+Song.create!( title: "Looking for the tangerine", user_id: 6, genre_id: 2, song: File.open(File.join(Rails.root, 'tangerine3.mp3')))
 
 
