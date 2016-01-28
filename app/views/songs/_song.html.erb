@@ -1,6 +1,5 @@
-<ul>
-<div class="sm2-bar-ui compact">
 
+<div class="sm2-bar-ui compact">
  <div class="bd sm2-main-controls">
 
   <div class="sm2-inline-texture"></div>
@@ -62,6 +61,13 @@
   </div>
 
  </div>
+ <% if user_signed_in? %>
+  <div style="float: left;"><%= button_to "+1",  new_favourite_path(:song, song.id), method: :post %>votes:<%= song.favourites.count %> - <%= link_to "Author's page", song.user %> </div>
+ <% end %>
+
 
 </div>
-</ul>
+
+
+
+

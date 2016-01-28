@@ -34,6 +34,21 @@
  //    align-content: center;
  // }
 
+a {
+  color: #ffffff;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+    position: relative;
+    left: 15px;
+}
+
  .follow-button {
   background-color: #595959;
  }
@@ -342,6 +357,8 @@ ul {
   left: 0px;
   min-width: 1em;
   max-width: 15em;
+  padding-left: 20px;
+  padding-bottom: 20px;
  }
 
  .sm2-bar-ui ul {

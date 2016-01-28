@@ -32,9 +32,9 @@ class GigsController < ApplicationController
       gig.user = current_user
     end
     if @gig.save
-      redirect_to root_path
+      redirect_to :back
     else
-      redirect_to root_path, notice: @gig.errors.full_messages.first
+      redirect_to :back, notice: @gig.errors.full_messages.first
     end
   end
 

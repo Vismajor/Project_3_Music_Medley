@@ -5,9 +5,9 @@ class FavouritesController < ApplicationController
     @favourite = @favourited.favourites.build
     @favourite.user = current_user
     if @favourite.save
-      redirect_to root_url, notice: "Favourite was created."
+      redirect_to :back, notice: ""
     else
-      redirect_to root_url, notice: "Favourite was not created."
+      redirect_to :back, notice: ""
     end
   end
 
