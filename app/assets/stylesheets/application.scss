@@ -34,6 +34,21 @@
  //    align-content: center;
  // }
 
+.collection-title{
+  border: 2px solid #ffffff;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.collection-list {
+  font-size: 30px;
+
+}
+.collection-list-songs {
+  font-size: 20px;
+}
+
+
 a {
   color: #ffffff;
 }
@@ -360,6 +375,15 @@ ul {
   padding-left: 20px;
   padding-bottom: 20px;
  }
+ .sm2-bar-ui.compact.collection {
+  position: relative;
+  left: 0px;
+  min-width: 1em;
+  max-width: 15em;
+  padding-left: 0px;
+  padding-bottom: 0px;
+ }
+
 
  .sm2-bar-ui ul {
   line-height: 1em;

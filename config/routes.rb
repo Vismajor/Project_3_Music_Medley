@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :subscriptions
   resources :plans
   post 'favourite/:favourite_type/:id', to: 'favourites#create', as: :new_favourite
+  get 'users/:id/game', to: 'users#game', as: :new_game
   
 
  

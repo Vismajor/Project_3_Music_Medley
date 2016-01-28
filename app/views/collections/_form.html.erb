@@ -17,10 +17,10 @@
 <div class="collection-create"><%= f.label 'Give a title to your collection!' %> 
 <%= f.text_field :title %></div>
 <%= f.submit %><br>
-
+<br>
 <% Song.all.each do |song| %>
 <ul>
-<div class="sm2-bar-ui compact">
+<div class="sm2-bar-ui compact collection">
 
  <div class="bd sm2-main-controls">
 
@@ -91,8 +91,6 @@
  </div>
 
 </div>
-
-<%= f.label "Add #{song.title} to your collection" %> 
 </ul>
 <% end %>
 <% end %>
