@@ -61,7 +61,7 @@ Song.create!( title: "Dateless Losers", user_id: 3, genre_id: 2, song: File.open
 Song.create!( title: "Drink", user_id: 4, genre_id: 2, song: File.open(File.join(Rails.root, 'Drink.mp3')))
 Song.create!( title: "I will possess your heart", user_id: 4, genre_id: 7, song: File.open(File.join(Rails.root, 'I will possess your heart.mp3')))
 Song.create!( title: "Title and registration", user_id: 4, genre_id: 7, song: File.open(File.join(Rails.root, 'Title and registration.mp3')))
-Song.create!( title: "Rosie", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Rosie.mmp3')))
+Song.create!( title: "Rosie", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Rosie.mp3')))
 Song.create!( title: "Back in Black", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Back in black.mp3')))
 Song.create!( title: "Thunderstruck", user_id: 5, genre_id: 2, song: File.open(File.join(Rails.root, 'Thunderstruck.mp3')))
 Song.create!( title: "Dirty deeds", user_id: 6, genre_id: 2, song: File.open(File.join(Rails.root, 'Dirty deeds.mp3')))
